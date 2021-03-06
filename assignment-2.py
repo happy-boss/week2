@@ -28,14 +28,16 @@ avg({"count":3,
 # print(data["employees"][0]["salary"])
 #第三題作業
 def maxProduct(nums):
-    maxNumber=0
-    for i in range(0,4,1):
-        for j in range(i+1,4,1):
+    maxNumber=nums[0]*nums[1]
+    for i in range(0,len(nums),1):
+        for j in range(i+1,len(nums),1):
             if nums[i]*nums[j]>maxNumber:
                 maxNumber=nums[i]*nums[j]
+                
     print(maxNumber)
 maxProduct([5, 20, 2, 6])
 maxProduct([10, -20, 0, 3])
+maxProduct([-20, 2])
 
 #第四題作業
 def twoSum(nums, target):
